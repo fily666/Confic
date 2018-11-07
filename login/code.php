@@ -2,13 +2,13 @@
         
 
         
-        $a =$_POST['a'];
+        $name =$_POST['name'];
         $username =$_POST['username'];
         $password =$_POST['password'];
 
 
         $conexion = mysqli_connect("localhost","root","","confic");
-        $consulta = "INSERT INTO user(a,username,password) VALUE('$a','$username','$password')";
+        $consulta = "INSERT INTO user(name,username,password) VALUE('$name','$username','$password')";
         $resultado = mysqli_query($conexion, $consulta);
        
         if(! $resultado){
