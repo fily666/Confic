@@ -1,3 +1,17 @@
+<?php
+$conexion = mysqli_connect("localhost", "root", "", "confic");
+/* verificar la conexión */
+if ($conexion->connect_errno) {
+         printf("Conexión fallida: %s\n", $conexion->connect_error);
+          exit();
+      }
+      $consulta = 'SELECT * FROM `user`';
+
+      $resultado = $conexion->query($consulta);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,43 +57,33 @@
                     <a href='usuarioeditar.html'><button class="button" >Nuevo Registro</button></a> 
 
                 <table>
+                <thead>
                     <tr>
-                        <th>Company</th>
-                        <th>Contact</th>
-                        <th>Country</th>
-                    </tr>
-                    <tr>
-                        <td>Alfreds Futterkiste</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-                    <tr>
-                        <td>Centro comercial Moctezuma</td>
-                        <td>Francisco Chang</td>
-                        <td>Mexico</td>
-                    </tr>
-                    <tr>
-                        <td>Ernst Handel</td>
-                        <td>Roland Mendel</td>
-                        <td>Austria</td>
-                    </tr>
-                    <tr>
-                        <td>Island Trading</td>
-                        <td>Helen Bennett</td>
-                        <td>UK</td>
-                    </tr>
-                    <tr>
-                        <td>Laughing Bacchus Winecellars</td>
-                        <td>Yoshi Tannamuri</td>
-                        <td>Canada</td>
-                    </tr>
-                    <tr>
-                        <td>Magazzini Alimentari Riuniti</td>
-                        <td>Giovanni Rovelli</td>
-                        <td>Italy</td>
-                    </tr>
-                </table>
-
+                <th>id</th>
+                <th>Nombre</th>
+                <th>usuario</th>
+                <th>accion</th>
+            </tr>
+                
+                </thead>
+                <tbody>
+                 <?php
+                while ($row = mysqli_fetch_assoc($resultado) )
+                {
+                ?>
+        <tr>
+                 <td><?php echo $row['id'] ?></td>
+                 <td><?php echo $row['name'] ?></td>
+                 <td><?php echo $row['username'] ?></td>
+        </tr>
+        <?php
+       }
+?>
+        
+ 
+                </tbody>
+            
+        </table>
 
             </div>
 
