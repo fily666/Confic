@@ -75,6 +75,11 @@ if ($conexion->connect_errno) {
                  <td><?php echo $row['id'] ?></td>
                  <td><?php echo $row['name'] ?></td>
                  <td><?php echo $row['username'] ?></td>
+                 <td><center>
+                      <a href="______-" class="btn" title="Editar">Editar</a>
+                         <a href="____" class="btn" title="Elimnar">Borrar</a>  
+             
+                 </center> </td>
         </tr>
         <?php
        }

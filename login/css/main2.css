@@ -54,3 +54,28 @@ tr:nth-child(even) {
 	  background-color: #3e8e41;
 	  color: #fff;
 	  }
+
+.btn{
+	
+		display: inline-block;
+		padding: 5px 15px;
+		font-size: 14px;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		outline: none;
+		color: black;
+		background-color: white;
+		border: none;
+		border-radius: 15px;
+		box-shadow: 0 9px #999;
+		border: rgb(5, 143, 0) 1px solid;
+		
+	  
+}
+	  
+.btn:hover {
+		  background-color: #3e8e41;
+		  color: #fff;
+		  }
+

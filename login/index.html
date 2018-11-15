@@ -9,51 +9,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/custom.css">
   </head>
   <body>
   
-  <div class="container">
-		<div class="row">
-			<div class="col-sm-12">
-				<h1>Plataforma de control y seguimiento DVND CONFIC</h1>
-				<p>Al hacer clic en "Registrarte", aceptas nuestras Condiciones, la Política de datos y la Política de cookies. Es posible que te enviemos notificaciones por SMS, que puedes desactivar cuando quieras.</p>		
-		</div>	
-	</div>
-	
-	<div class="row">	
-		<div class="col-sm-12 col-md-6 col-lg-6">
+		<div class="general">
+			<header>
+					<h1>Plataforma de control y seguimiento DVND CONFIC</h1>
+			
+			</header>
+			<nav>
+	<p>Al hacer clic en "Registrarte", aceptas nuestras Condiciones, la Política de datos y la Política de cookies. Es posible que te enviemos notificaciones por SMS, que puedes desactivar cuando quieras.</p>		
 		
-		<h3>Crea una cuenta</h3><hr />
+			</nav>
+			<aside class="the">
+				<h3>Ir al Login</h3><hr />
+						<p>¿Ya tienes una cuenta? <a href="login.html" title="Login Here">Inisiar Sesión</a></p>
+					
+						</aside>
+			<aside class="thu">
+					<h3>Crea una cuenta</h3><hr />
 		
 		<form method="POST" action="code.php">
-			<div class="form-group">				
-				<input type="text" class="form-control" name="name" placeholder="Nombre" required>			
-		  </div>
-		  
-		  <div class="form-group">				
-				<input type="text" class="form-control" name="username" aria-describedby="emailHelp" placeholder="Usuario" required>
-			</div>
-		  
-		  <div class="form-group">				
-				<input type="password" class="form-control" name="password" placeholder="Contraceña" required>
-			</div>
-		  
-		  <button type="submit" class="btn btn-success btn-block">Registrar</button>
+							
+			<form>
+				<ul class="form-style-1">
+						<li><label>Nombre <span class="required">*</span></label>
+								<input type="text" name="name" class="field-long" > 
+								
+						</li>
+						<li>
+								<label>Usuario <span class="required">*</span></label>
+								<input type="text" name="username" class="field-long">
+						</li>
+						<li>
+										<label>Contraseña <span class="required">*</span></label>
+										<input type="password" name="password" class="field-long" >
+								</li>
+						<li>
+							<button class="button">Registrar</button>	
+						</li>		
+						 
+				</ul>
+				
+				</form>
 		</form>		
-		</div>		
-		<div class="col-sm-12 col-md-6 col-lg-6">
-			<h3>Ir al Login</h3><hr />
-			<p>¿Ya tienes una cuenta? <a href="login.html" title="Login Here">Inisiar Sesión</a></p>
-		</div>
+	</aside>
+			
 	</div>
+	
+	<footer>
+
+		<p> Ejercito Nacional de Colombia</p>
+		<p> Carrera 54 N 26 25 CAN Bogot&aacute, D.C. </p>
+		<p> PBX (57-1) 018000 111 689</p>
+		<p> Horario: 8:00 a 16:00 horas de lunes a viernes.</p>
+		<p> Atenci&oacuten ciudadana: tel&eacute;fono (57-1) 2216336 - 2220950 - 4261499 </p>
+		<p> (57-1) 4261499 </p>
+		<p></p>
+
+
+
+
+
+
+
+
+
+
+</footer>
+
+		
+	
 </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
- 
+   
 	</body>
 </html>
