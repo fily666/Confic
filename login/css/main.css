@@ -103,6 +103,10 @@ li a:hover {
     height: 120px;
     float: left;
 }
+.inm{
+    height: 70%;
+    width: 70%;
+}
 
 .tuud {
     width: 100%;
