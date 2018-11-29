@@ -14,70 +14,53 @@
   <body>
   
 		<div class="general">
-			<header>
-					<h1>Plataforma de control y seguimiento DVND CONFIC</h1>
 			
-			</header>
-			<nav>
-	<p>Al hacer clic en "Registrarte", aceptas nuestras Condiciones, la Política de datos y la Política de cookies. Es posible que te enviemos notificaciones por SMS, que puedes desactivar cuando quieras.</p>		
-		
-			</nav>
-			<aside class="the">
-				<h3>Ir al Login</h3><hr />
-						<p>¿Ya tienes una cuenta? <a href="login.html" title="Login Here">Inisiar Sesión</a></p>
-					
-						</aside>
 			<aside class="thu">
 					<h3>Crea una cuenta</h3><hr />
 		
-		<form method="POST" action="code.php">
+		<form method="POST" action="ccode.php">
 							
-			<form>
+			
 				<ul class="form-style-1">
 						<li><label>Nombre <span class="required">*</span></label>
-								<input type="text" name="name" class="field-long" > 
-								
+							<input type="text" name="name" class="field-divided" placeholder="Nombre" />              
+
 						</li>
 						<li>
-								<label>Usuario <span class="required">*</span></label>
-								<input type="text" name="username" class="field-long">
+								<label>Tipo de documento de identidad  <span class="required">*</span></label>							
+								<select name="identificacion" class="field-divided">
+									<option value="CC">Cédula de Ciudadanía</option>
+									<option value="TI">Tarjeta de Identidad</option>
+									<option value="CE">Cédula de Extranjería</option>
+									<option value="PS">Pasaporte</option>
+									<option value="DNI">Documento Nacional de Identificación</option>
+								</select>
+
+								<input type="number" name="number" class="field-divided" placeholder="Número de documento" />  
+
 						</li>
-						<li>
-										<label>Contraseña <span class="required">*</span></label>
-										<input type="password" name="password" class="field-long" >
+					
+								<li>
+									<label>Email <span class="required">*</span></label>
+									<input type="email" name="email" class="field-long" />
 								</li>
+								<li>
+									<label>Novedades<span class="required">*</span></label>
+									<textarea name="novedades" class="field-long field-textarea"></textarea>
+								</li>  
 						<li>
 							<button class="button">Registrar</button>	
 						</li>		
 						 
 				</ul>
 				
-				</form>
+				
 		</form>		
 	</aside>
 			
 	</div>
 	
-	<footer>
 
-		<p> Ejercito Nacional de Colombia</p>
-		<p> Carrera 54 N 26 25 CAN Bogot&aacute, D.C. </p>
-		<p> PBX (57-1) 018000 111 689</p>
-		<p> Horario: 8:00 a 16:00 horas de lunes a viernes.</p>
-		<p> Atenci&oacuten ciudadana: tel&eacute;fono (57-1) 2216336 - 2220950 - 4261499 </p>
-		<p> (57-1) 4261499 </p>
-		<p></p>
-
-
-
-
-
-
-
-
-
-
-</footer>
 
 		
 	

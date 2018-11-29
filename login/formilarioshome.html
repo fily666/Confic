@@ -1,3 +1,16 @@
+<?php
+$conexion = mysqli_connect("localhost", "root", "", "confic");
+/* verificar la conexión */
+if ($conexion->connect_errno) {
+         printf("Conexión fallida: %s\n", $conexion->connect_error);
+          exit();
+      }
+      $consulta = 'SELECT * FROM `g1`';
+
+      $resultado = $conexion->query($consulta);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,7 +42,7 @@
             <br>
             <ul id="menuList">
                 <li><a href='home.html' rel='nofollow'>Home</a></li>
-                <li><a href='formilarioshome.html' rel='nofollow'>Inventario</a></li>
+                <li><a href='formilarioshome.php' rel='nofollow'>Inventario</a></li>
                 <li><a href='user.php' rel='nofollow'>Usuario</a></li>
             </ul>
         </section>
@@ -44,76 +57,80 @@
                    <div>
                        <a href='formularios.html'><button class="button" >Nuevo Registro</button></a> 
                    </div>
-                <table>
-                    <tr>
-                        <th>Company</th>
-                        <th>Contact</th>
-                        <th>Country</th>
-                    </tr>
-                    <tr>
-                        <td>Alfreds Futterkiste</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-                    <tr>
-                        <td>Centro comercial Moctezuma</td>
-                        <td>Francisco Chang</td>
-                        <td>Mexico</td>
-                    </tr>
-                    <tr>
-                        <td>Ernst Handel</td>
-                        <td>Roland Mendel</td>
-                        <td>Austria</td>
-                    </tr>
-                    <tr>
-                        <td>Island Trading</td>
-                        <td>Helen Bennett</td>
-                        <td>UK</td>
-                    </tr>
-                    <tr>
-                        <td>Laughing Bacchus Winecellars</td>
-                        <td>Yoshi Tannamuri</td>
-                        <td>Canada</td>
-                    </tr>
-                    <tr>
-                        <td>Magazzini Alimentari Riuniti</td>
-                        <td>Giovanni Rovelli</td>
-                        <td>Italy</td>
-                    </tr>
-                </table>
+                   <table>
+                    <thead>
+                        <tr>
+                    <th>id</th>
+                    <th>Nombre</th>
+                    <th>Tipó de identificacion</th>
+                    <th>N° identificacion</th>
+                    <th>Email</th>
+                    <th>Novedades</th>
+                    <th>Acciones</th>
+                </tr>
+                    
+                    </thead>
+                    <tbody>
+                     <?php
+                    while ($row = mysqli_fetch_assoc($resultado) )
+                    {
+                    ?>
+                   
+            <tr>
+                     <td><?php echo $row['id'] ?></td>
+                     <td><?php echo $row['name'] ?></td>
+                     <td><?php echo $row['identificacion'] ?></td>
+                     <td><?php echo $row['number'] ?></td>
+                     <td><?php echo $row['email'] ?></td>
+                     <td><?php echo $row['novedades'] ?></td>
 
-
-            </div>
-
-        </aside>
-
-        <footer>
-
-            <p> Ejercito Nacional de Colombia</p>
-            <p> Carrera 54 N 26 25 CAN Bogot&aacute, D.C. </p>
-            <p> PBX (57-1) 018000 111 689</p>
-            <p> Horario: 8:00 a 16:00 horas de lunes a viernes.</p>
-            <p> Atenci&oacuten ciudadana: tel&eacute;fono (57-1) 2216336 - 2220950 - 4261499 </p>
-            <p> (57-1) 4261499 </p>
-            <p></p>
-
-
-
-
-
-
-
-
-
-
-        </footer>
-
-
-
-
-    </div>
-
-
-
-
-</body>
+                     <td><center>
+                          <a href="______-" class="btn" title="Editar">Editar</a>
+                             <a href="____" class="btn" title="Elimnar">Borrar</a>  
+                 
+                     </center> </td>
+            </tr>
+            <?php
+           }
+    ?>
+    </tbody>
+            
+            </table>
+    
+                </div>
+    
+            </aside>
+    
+            <footer>
+    
+                <p> Ejercito Nacional de Colombia</p>
+                <p> Carrera 54 N 26 25 CAN Bogot&aacute, D.C. </p>
+                <p> PBX (57-1) 018000 111 689</p>
+                <p> Horario: 8:00 a 16:00 horas de lunes a viernes.</p>
+                <p> Atenci&oacuten ciudadana: tel&eacute;fono (57-1) 2216336 - 2220950 - 4261499 </p>
+                <p> (57-1) 4261499 </p>
+                <p></p>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+            </footer>
+    
+    
+    
+    
+        </div>
+    
+    
+    
+    
+    </body>
+    
+        
+          

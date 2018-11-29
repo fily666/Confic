@@ -1,20 +1,22 @@
 <?php
 
         $name =$_POST['name'];
-        $username =$_POST['username'];
-        $password =$_POST['password'];
+        $identificacion =$_POST['identificacion'];
+        $number =$_POST['number'];
+        $email =$_POST['email'];
+        $novedades =$_POST['novedades'];
 
-        $pas_cifrado=password_hash($password,PASSWORD_DEFAULT);
+        
 
         $conexion = mysqli_connect("localhost","root","","confic");
-        $consulta = "INSERT INTO user(name,username,password) VALUE('$name','$username','$pas_cifrado')";
+        $consulta = "INSERT INTO g1(name,identificacion,number,email,novedades) VALUE('$name','$identificacion','$number','$email','$novedades')";
        
 
-        $verificar_username = mysqli_query($conexion, "SELECT * FROM user WHERE  username = '$username'");
-     if(mysqli_num_rows($verificar_username) > 0){
+        $verificar_number = mysqli_query($conexion, "SELECT * FROM g1 WHERE  number = '$number'");
+     if(mysqli_num_rows($verificar_number) > 0){
              echo '<script>
              alert("El Usuario ya esta Registrado");
-             window.history.go(-1);
+             window.history.go(-2);
              </script>';
              exit;
      }

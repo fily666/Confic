@@ -42,8 +42,8 @@ if ($conexion->connect_errno) {
             <br>
             <ul id="menuList">
                 <li><a href='home.html' rel='nofollow'>Home</a></li>
-                <li><a href='formilarioshome.html' rel='nofollow'>Inventario</a></li>
-                <li><a href='user.html' rel='nofollow'>Usuario</a></li>
+                <li><a href='formilarioshome.php' rel='nofollow'>Inventario</a></li>
+                <li><a href='user.php' rel='nofollow'>Usuario</a></li>
             </ul>
         </section>
         <aside>

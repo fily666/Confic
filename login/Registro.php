@@ -1,17 +1,19 @@
 <?php
 
-        $name =$_POST['name'];
-        $username =$_POST['username'];
-        $password =$_POST['password'];
+        $Name =$_POST['Name'];
+        $Nameu =$_POST['Nameu'];
+        $Identificacion =$_POST['Identificacion'];
+        $Number =$_POST['Number'];
+        $Email =$_POST['Email'];
+        $Novedades =$_POST['Novedades'];
 
-        $pas_cifrado=password_hash($password,PASSWORD_DEFAULT);
 
         $conexion = mysqli_connect("localhost","root","","confic");
-        $consulta = "INSERT INTO user(name,username,password) VALUE('$name','$username','$pas_cifrado')";
+        $consulta = "INSERT INTO inventario(Name,Nameu,Identificacion,Number,Email,Novedades) VALUE('$Name''$Nameu''$Identificacion''$Number','$Email','$Novedades')";
        
 
-        $verificar_username = mysqli_query($conexion, "SELECT * FROM user WHERE  username = '$username'");
-     if(mysqli_num_rows($verificar_username) > 0){
+        $verificar_Number = mysqli_query($conexion, "SELECT * FROM inventario WHERE  Number = '$Number'");
+     if(mysqli_num_rows($verificar_Number) > 0){
              echo '<script>
              alert("El Usuario ya esta Registrado");
              window.history.go(-1);

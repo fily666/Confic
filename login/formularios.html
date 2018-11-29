@@ -33,7 +33,7 @@
             <br>
             <ul id="menuList">
                     <li><a href='home.html' rel='nofollow'>Home</a></li>
-                    <li><a href='formilarioshome.html' rel='nofollow'>Inventario</a></li>
+                    <li><a href='formilarioshome.php' rel='nofollow'>Inventario</a></li>
                     <li><a href='user.php' rel='nofollow'>Usuario</a></li>
                </ul>
         </section>
@@ -45,28 +45,40 @@
             </div>
             <div class="tood">
 <center> <h1>Nuevo Registro </h1></center>
-                <form>
-                    <ul class="form-style-1">
-                        <li><label>Full Name <span class="required">*</span></label><input type="text" name="field1" class="field-divided" placeholder="First" /> <input type="text" name="field2" class="field-divided" placeholder="Last" /></li>
-                        <li>
-                            <label>Email <span class="required">*</span></label>
-                            <input type="email" name="field3" class="field-long" />
-                        </li>
-                        <li>
-                            <label>Subject</label>
-                            <select name="field4" class="field-select">
-                            <option value="Advertise">Advertise</option>
-                            <option value="Partnership">Partnership</option>
-                            <option value="General Question">General</option>
-                            </select>
-                        </li>
-                        <li>
-                            <label>Your Message <span class="required">*</span></label>
-                            <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
-                        </li>                        
+<form method="POST" action="guardadoinventario.php">
+							
+			
+    <ul class="form-style-1">
+            <li><label>Nombre <span class="required">*</span></label>
+                <input type="text" name="name" class="field-divided" placeholder="Nombre" />              
+
+            </li>
+            <li>
+                    <label>Tipo de documento de identidad  <span class="required">*</span></label>							
+                    <select name="identificacion" class="field-divided">
+                        <option value="CC">Cédula de Ciudadanía</option>
+                        <option value="TI">Tarjeta de Identidad</option>
+                        <option value="CE">Cédula de Extranjería</option>
+                        <option value="PS">Pasaporte</option>
+                        <option value="DNI">Documento Nacional de Identificación</option>
+                    </select>
+
+                    <input type="number" name="number" class="field-divided" placeholder="Número de documento" />  
+
+            </li>
+        
+                    <li>
+                        <label>Email <span class="required">*</span></label>
+                        <input type="email" name="email" class="field-long" />
+                    </li>
+                    <li>
+                        <label>Novedades<span class="required">*</span></label>
+                        <textarea name="novedades" class="field-long field-textarea"></textarea>
+                    </li>                        
                     </ul>
                      <button class="button">Crear</button>
-            <button class="button">Regresar</button>  
+                     <a href='formilarioshome.php' class="button">Regresar</a>
+                     
                     </form> 
                     
                    
