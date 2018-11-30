@@ -55,7 +55,7 @@
         border: 1px solid #88D5E9;
       }
       .form-style-1 .field-divided{
-        width: 48%;
+        width: 49%;
       
       }
       
@@ -82,4 +82,13 @@
       }
       .form-style-1 .required{
         color:red;
+      }
+
+      .der{
+        float: right;
+        width: 49%;
+      }
+      .izqa{
+        float: left;
+        width: 49%;
       }

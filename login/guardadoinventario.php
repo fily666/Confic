@@ -5,11 +5,13 @@
         $number =$_POST['number'];
         $email =$_POST['email'];
         $novedades =$_POST['novedades'];
+        $sexo =$_POST['sexo'];
+        $fecha =$_POST['fecha'];
 
         
 
         $conexion = mysqli_connect("localhost","root","","confic");
-        $consulta = "INSERT INTO g1(name,identificacion,number,email,novedades) VALUE('$name','$identificacion','$number','$email','$novedades')";
+        $consulta = "INSERT INTO g1(name,identificacion,number,email,novedades,sexo,fecha) VALUE('$name','$identificacion','$number','$email','$novedades','$sexo','$fecha')";
        
 
         $verificar_number = mysqli_query($conexion, "SELECT * FROM g1 WHERE  number = '$number'");

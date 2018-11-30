@@ -1,75 +1,161 @@
 <!doctype html>
 
 <html lang="en">
-  <head>
+
+<head>
     <title>Create an account or Login</title>
-    
-	<!-- Required meta tags -->
+
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="css/custom.css">
-  </head>
-  <body>
-  
-		<div class="general">
-			
-			<aside class="thu">
-					<h3>Crea una cuenta</h3><hr />
-		
-		<form method="POST" action="ccode.php">
-							
-			
-				<ul class="form-style-1">
-						<li><label>Nombre <span class="required">*</span></label>
-							<input type="text" name="name" class="field-divided" placeholder="Nombre" />              
+    <link rel="stylesheet" href="css/custom.css">
+</head>
 
-						</li>
-						<li>
-								<label>Tipo de documento de identidad  <span class="required">*</span></label>							
-								<select name="identificacion" class="field-divided">
-									<option value="CC">Cédula de Ciudadanía</option>
-									<option value="TI">Tarjeta de Identidad</option>
-									<option value="CE">Cédula de Extranjería</option>
-									<option value="PS">Pasaporte</option>
-									<option value="DNI">Documento Nacional de Identificación</option>
-								</select>
+<body>
 
-								<input type="number" name="number" class="field-divided" placeholder="Número de documento" />  
+    <div class="general">
 
-						</li>
-					
-								<li>
-									<label>Email <span class="required">*</span></label>
-									<input type="email" name="email" class="field-long" />
-								</li>
-								<li>
-									<label>Novedades<span class="required">*</span></label>
-									<textarea name="novedades" class="field-long field-textarea"></textarea>
-								</li>  
-						<li>
-							<button class="button">Registrar</button>	
-						</li>		
-						 
-				</ul>
-				
-				
-		</form>		
-	</aside>
-			
-	</div>
-	
+        <aside class="thu">
+            <h3>Crea una cuenta</h3>
+            <hr />
+
+            <form method="POST" action="ccode.php">
 
 
-		
-	
-</div>
-   <!-- Optional JavaScript -->
+                <ul class="form-style-1">
+                    <li><label>Nombre <span class="required">*</span></label>
+                        <input type="text" name="name" class="field-divided" placeholder="Nombre" />
+
+                    </li>
+                    <li>
+                        <label>Tipo de documento de identidad <span class="required">*</span></label>
+                        <select name="identificacion" class="field-divided">
+                            <option value="CC">Cédula de Ciudadanía</option>
+                            <option value="TI">Tarjeta de Identidad</option>
+                            <option value="CE">Cédula de Extranjería</option>
+                            <option value="PS">Pasaporte</option>
+                            <option value="DNI">Documento Nacional de Identificación</option>
+                        </select>
+
+                        <input type="number" name="number" class="field-divided" placeholder="Número de documento" />
+
+                    </li>
+
+                    <li>
+                        <label>Email <span class="required">*</span></label>
+                        <input type="email" name="email" class="field-long" />
+                    </li>
+                    <li>
+                        <label>Novedades<span class="required">*</span></label>
+                        <textarea name="novedades" class="field-long field-textarea"></textarea>
+                    </li>
+                    <li>
+                        <button class="button">Registrar</button>
+                    </li>
+
+                </ul>
+
+
+            </form> }
+        </aside>
+
+    </div>
+
+    
+        
+            <div class="dataTables_filter" id="datatable1_filter">
+                <label>Buscar <input type="text" aria-controls="datatable1"></label>
+            </div>
+        
+        
+            <div id="datatable1_length" class="dataTables_length">
+                <label>Mostrando <select size="1" name="datatable1_length" aria-controls="datatable1">
+                        <option value="10" selected="selected">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select> Registros</label>
+            </div>
+        
+        
+
+        
+    
+
+
+
+    <div class="col-sm-12">
+        <div class="pull-left">
+            <div class="dataTables_info" id="datatable1_info">Mostrando 1 - 10 de 36 registros
+
+            </div>
+        </div>
+        <div class="pull-right">
+            <div class="dataTables_paginate paging_bs_normal">
+                <ul class="pagination">
+                    <li class="prev disabled">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-chevron-left">
+
+                            </span>&nbsp;Anterior</a></li>
+                    <li class="active">
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li class="next"><a href="#">Próximo&nbsp;<span class="glyphicon glyphicon-chevron-right">
+
+                            </span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix">
+
+        </div>
+    </div>
+
+
+    </div>
+
+
+
+    <script>
+        jQuery(document).ready(function() {
+            $("#datatable1").dataTable();
+        });
+
+        function confirma(id) {
+            bootbox.confirm("¿Está seguro de eliminar este usuario?", function(result) {
+                if (result) {
+                    $("#eliminar").find(':input').each(function() {
+                        var elemento = this;
+                        if (elemento.name == "id") {
+                            elemento.value = id;
+                            $("#eliminar").attr("action", $("#eliminar").attr("action") + '/' + id);
+                            $("#eliminar").submit();
+                        }
+                    });
+                }
+            });
+        }
+
+    </script>
+    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
-	</body>
+</body>
+
 </html>

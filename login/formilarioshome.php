@@ -5,12 +5,11 @@ if ($conexion->connect_errno) {
          printf("Conexión fallida: %s\n", $conexion->connect_error);
           exit();
       }
-      $consulta = 'SELECT * FROM `user`';
+      $consulta = 'SELECT * FROM `g1`';
 
       $resultado = $conexion->query($consulta);
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,12 +20,13 @@ if ($conexion->connect_errno) {
     <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
     <link rel="stylesheet" href="./css/main2.css">
     <link rel="stylesheet" href="./css/main.css">
-    <title>usuarios</title>
+    <title>index</title>
 </head>
 
 <body>
 
     <div class="general">
+
         <header>
             <img class="yot" src="./img/descarga.jpg">
             <h1>Plataforma de control y seguimiento DVND CONFIC </h1>
@@ -49,13 +49,15 @@ if ($conexion->connect_errno) {
         <aside>
             <div class="tuud">
 
-                <h1>usuarios </h1>
+                <h1>Inventario </h1>
 
             </div>
 
             <div class="tood">
-                <a href='usuarioeditar.html'><button class="button">Nuevo Registro</button></a>
-               <br>
+                <div>
+                    <a href='formularios.html'><button class="button">Nuevo Registro</button></a>
+                </div>
+                <br>
                <br>
                <br>
                
@@ -71,22 +73,26 @@ if ($conexion->connect_errno) {
             <div class="mmm1" id="datatable1_filter">
                 <label>Buscar <input type="text" aria-controls="datatable1" ></label>
             </div>
-        
+            
                 <table>
                     <thead>
                         <tr>
                             <th>id</th>
                             <th>Nombre</th>
-                            <th>usuario</th>
-                            <th>accion</th>
+                            <th>Tipó de identificacion</th>
+                            <th>N° identificacion</th>
+                            <th>Email</th>
+                            <th>Fecha</th>
+                            <th>Acciones</th>
                         </tr>
 
                     </thead>
                     <tbody>
                         <?php
-                while ($row = mysqli_fetch_assoc($resultado) )
-                {
-                ?>
+                    while ($row = mysqli_fetch_assoc($resultado) )
+                    {
+                    ?>
+
                         <tr>
                             <td>
                                 <?php echo $row['id'] ?>
@@ -95,8 +101,18 @@ if ($conexion->connect_errno) {
                                 <?php echo $row['name'] ?>
                             </td>
                             <td>
-                                <?php echo $row['username'] ?>
+                                <?php echo $row['identificacion'] ?>
                             </td>
+                            <td>
+                                <?php echo $row['number'] ?>
+                            </td>
+                            <td>
+                                <?php echo $row['email'] ?>
+                            </td>
+                            <td>
+                                <?php echo $row['fecha'] ?>
+                            </td>
+
                             <td>
                                 <center>
                                     <a href="______-" class="btn" title="Editar">Editar</a>
@@ -106,14 +122,23 @@ if ($conexion->connect_errno) {
                             </td>
                         </tr>
                         <?php
-       }
-?>
-
-
+           }
+    ?>
                     </tbody>
 
                 </table>
 
+            </div>
+            
+            <div>
+                <form method="post" class="form" action="reporte.php">
+                <input type="date" name="fecha1"/>
+                <input type="date" name="fecha2" />
+                <input type="submit" name="descargar" />
+
+
+
+                </form>
             </div>
 
         </aside>

@@ -11,8 +11,8 @@
 
     <title>Formularios</title>
     <style type="text/css">
-      
-      </style>
+
+    </style>
 </head>
 
 <body>
@@ -32,10 +32,10 @@
             </center>
             <br>
             <ul id="menuList">
-                    <li><a href='home.html' rel='nofollow'>Home</a></li>
-                    <li><a href='formilarioshome.php' rel='nofollow'>Inventario</a></li>
-                    <li><a href='user.php' rel='nofollow'>Usuario</a></li>
-               </ul>
+                <li><a href='home.html' rel='nofollow'>Home</a></li>
+                <li><a href='formilarioshome.php' rel='nofollow'>Inventario</a></li>
+                <li><a href='user.php' rel='nofollow'>Usuario</a></li>
+            </ul>
         </section>
         <aside>
             <div class="tuud">
@@ -44,49 +44,86 @@
 
             </div>
             <div class="tood">
-<center> <h1>Nuevo Registro </h1></center>
-<form method="POST" action="guardadoinventario.php">
-							
-			
-    <ul class="form-style-1">
-            <li><label>Nombre <span class="required">*</span></label>
-                <input type="text" name="name" class="field-divided" placeholder="Nombre" />              
+                <center>
+                    <h1>Nuevo Registro </h1>
+                </center>
+                <form method="POST" action="guardadoinventario.php">
 
-            </li>
-            <li>
-                    <label>Tipo de documento de identidad  <span class="required">*</span></label>							
-                    <select name="identificacion" class="field-divided">
-                        <option value="CC">Cédula de Ciudadanía</option>
-                        <option value="TI">Tarjeta de Identidad</option>
-                        <option value="CE">Cédula de Extranjería</option>
-                        <option value="PS">Pasaporte</option>
-                        <option value="DNI">Documento Nacional de Identificación</option>
-                    </select>
 
-                    <input type="number" name="number" class="field-divided" placeholder="Número de documento" />  
+                    <ul class="form-style-1">
+                        <div>
+                             <li><label>Nombre <span class="required">*</span></label>
+                            <input type="text" name="name" class="field-long" placeholder="Nombre" />
 
-            </li>
-        
-                    <li>
-                        <label>Email <span class="required">*</span></label>
-                        <input type="email" name="email" class="field-long" />
-                    </li>
-                    <li>
-                        <label>Novedades<span class="required">*</span></label>
-                        <textarea name="novedades" class="field-long field-textarea"></textarea>
-                    </li>                        
+                        </li>
+                        </div>
+                        <div>
+                           <li>
+                            <label>Tipo de documento de identidad <span class="required">*</span></label>
+                            <select name="identificacion" class="field-divided">
+                                <option value="CC">Cédula de Ciudadanía</option>
+                                <option value="TI">Tarjeta de Identidad</option>
+                                <option value="CE">Cédula de Extranjería</option>
+                                <option value="PS">Pasaporte</option>
+                                <option value="DNI">Documento Nacional de Identificación</option>
+                            </select>
+
+                            <input type="number" name="number" class="field-divided" placeholder="Número de documento" />
+
+                        </li> 
+                        </div>
+                        <div class="izqa">
+                                <li>
+                                        <label>Sexo <span class="required" >*</span></label>
+                                        <input type="radio" name="sexo" value="hombre" checked="checked" /> Hombre <br>
+                                        <input type="radio" name="sexo" value="mujer" /> Mujer 
+                                </li>
+                            </div>
+          
+                            <div class="der">
+                               <li>
+                                    <label>Fecha<span class="required">*</span></label>
+                                    <input type="date" name="fecha"class="field-divided" />
+                                </li> 
+                            </div>
+                            <br><br><br><br>
+                            
+                        <div>
+                           <li>
+                            <label>Email <span class="required">*</span></label>
+                            <input type="email" name="email" class="field-long" />
+                            
+                        </li> 
+                        </div>
+                        
+                        
+              
+
+                        <div>
+                            <li>
+                                   
+                            <label>Novedades<span class="required" >*</span></label>
+                            <textarea name="novedades" class="field-long field-textarea"></textarea> 
+                        </li>
+                        </div>
+                              
+                         
+                           
+                               
+                           
+                        
                     </ul>
-                     <button class="button">Crear</button>
-                     <a href='formilarioshome.php' class="button">Regresar</a>
-                     
-                    </form> 
-                    
-                   
-            </div>
-           
-            
+                    <button class="button">Crear</button>
+                    <a href='formilarioshome.php' class="button">Regresar</a>
 
-                
+                </form>
+
+
+            </div>
+
+
+
+
 
         </aside>
 
