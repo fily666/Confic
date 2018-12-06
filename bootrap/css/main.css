@@ -1,0 +1,20 @@
+
+/* estilo de la pagina */
+* {
+    margin: auto;
+    padding: auto; 
+    margin-top:10px;
+    margin-left:10px; 
+    margin-bottom: 10px;
+    margin-left: 10px;
+    ;
+}
+
+body {
+    background-color: white;
+    color: black;
+
+}
+
+
+

@@ -23,7 +23,7 @@ if(isset($_POST['descargar']))
 
 	// SALIDA DEL ARCHIVO
 	$salida=fopen('php://output', 'w');
-	// ENCABEZADOS
+	// ENCABEZADOS sep=,
 	fputcsv($salida, array('id', 'name', 'identificacion', 'number', 'email', 'novedades', 'sexo', 'fecha'));
 	// QUERY PARA CREAR EL REPORTE
 	$reporteCsv=$conexion->query("SELECT *  FROM g1 where fecha BETWEEN '$fecha1' AND '$fecha2' ORDER BY id");

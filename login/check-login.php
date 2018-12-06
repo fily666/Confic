@@ -60,7 +60,7 @@ session_start();
 		echo "<div class='alert alert-success' role='alert'><strong>Welcome!</strong> $row[Name]			
 		<p><a href='edit-profile.php'>Edit Profile</a></p>	
 		<p><a href='logout.php'>Logout</a></p></div>";
-		header('Location: home.html');	
+		 header('Location: home.html');	
 	
 	} else {
 		echo "<div class='alert alert-danger' role='alert'>username or Password are incorrects!
