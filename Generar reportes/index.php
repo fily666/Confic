@@ -43,12 +43,14 @@ $resAlumnos = $conexion->query($alumnos);
 						 <td>' . $registroAlumnos['carrera'] . '</td>
 						 <td>' . $registroAlumnos['grupo'] . '</td>
 						 <td>' . $registroAlumnos['fecha_ingreso'] . '</td>
-						 </tr>';
+					</tr>';
 			}
 			?>
 		</table>
+		
 	</section>
 	<div class="container">
+		
 		<!-- Trigger the modal with a button -->
 		<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Generar Reporte</button>
 
@@ -73,10 +75,8 @@ $resAlumnos = $conexion->query($alumnos);
 						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
 					</div>
 				</div>
-
 			</div>
 		</div>
-
 	</div>
 	
 </body>
